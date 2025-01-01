@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommendations</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        .header {
+            font-size: 2.5rem;
+            color: #4F46E5; /* Tailwind Indigo-600 */
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .recommendation {
+            display: flex;
+            flex-wrap: nowrap; /* Ensures all boxes are on the same row without wrapping */
+            overflow-x: auto; /* Adds horizontal scrolling if the content exceeds the container width */
+            gap: 1.5rem; /* Adds spacing between boxes */
+            justify-content: start; /* Aligns all boxes to the left */
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+
+        .movie-card {
+            flex: 0 0 auto; /* Prevents boxes from shrinking or growing */
+            background-color: #E5E7EB; /* Tailwind Gray-200 */
+            border-radius: 0.5rem;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+            width: 200px; /* Fixed width for all boxes */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .movie-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .movie-title {
+            font-weight: bold;
+            color: #374151; /* Tailwind Gray-800 */
+            margin-top: 0.5rem;
+            font-size: 1rem;
+        }
+
+        img {
+            border-radius: 0.5rem;
+            height: auto;
+            max-width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Movie Recommendations</div>
+    <div class="recommendation">
+        <div class="movie-card">
+            <img src="movie1.jpg" alt="Movie 1">
+            <div class="movie-title">Movie 1</div>
+        </div>
+        <div class="movie-card">
+            <img src="movie2.jpg" alt="Movie 2">
+            <div class="movie-title">Movie 2</div>
+        </div>
+        <div class="movie-card">
+            <img src="movie3.jpg" alt="Movie 3">
+            <div class="movie-title">Movie 3</div>
+        </div>
+        <!-- Add more movie cards as needed -->
+    </div>
+</body>
+</html>
